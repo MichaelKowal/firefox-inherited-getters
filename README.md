@@ -37,19 +37,6 @@ The formatter only takes over objects that inherit getters written in JavaScript
 - **Header preview:** the collapsed header reads `title`, or `id` if there's no title, to show a short preview. You can change this with `PREVIEW_KEYS` at the top of `formatter.js`.
 - **Methods:** methods on the prototype aren't listed at the top level, same as Chrome. Use `[[Prototype]]` to see them.
 
-## Installing permanently
-
-Regular Firefox only installs signed extensions permanently. Your options are:
-
-- **Sign it as unlisted on addons.mozilla.org.** Signing is automatic and nothing gets published. With [web-ext](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/) and AMO API keys, run this from this folder:
-
-  ```bash
-  npx web-ext sign --channel unlisted --api-key <JWT issuer> --api-secret <JWT secret>
-  ```
-
-  Then install the `.xpi` it produces.
-- **Use Firefox Developer Edition, Nightly or ESR** with `xpinstall.signatures.required` set to `false` in `about:config`, and install an unsigned zip of this folder.
-
 ## Limiting which sites it runs on
 
 `manifest.json` matches `<all_urls>`. To run it only on your dev or test hosts, edit `matches`, for example:
