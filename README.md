@@ -49,5 +49,5 @@ If the formatter isn't taking effect, open `about:addons` → this extension →
 
 ## Files
 
-- `manifest.json`: an MV3 manifest with one content script that runs in the page's own world at `document_start`. Requires Firefox 128 or later.
+- `manifest.json`: an MV3 manifest with one content script that runs in the page's own world at `document_start`. Requires Firefox 140 or later (142 on Android), the first versions that support the `data_collection_permissions` key.
 - `formatter.js`: the formatter itself. It adds an entry to `window.devtoolsFormatters`.
